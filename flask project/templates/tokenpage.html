@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<head>
+<script>
+  //window.setTimeout( function() {
+   // window.location.reload();
+ // }, 3000);
+</script>
+<title>Flask模板</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<center><h6 style="color:white;width:660px;height:60px;font-size:500%;">YOUR TOKEN IS {{token}}</h6>  
+  <textarea id="w3review" name="user" rows="4" cols="50" hidden>{{already}}</textarea>
+</body>
+</html>

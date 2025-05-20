@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<head>
+<script>
+  //window.setTimeout( function() {
+   // window.location.reload();
+ // }, 3000);
+</script>
+<title>Flask模板</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='buy_sell_take_button.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='horizontalbar.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<ul>
+<form method="POST" action="/playerpovetypage">  
+<li><a href="{{ url_for('playerpovetypage') }}" >銀行戶口狀況</a></li>
+</form>
+<form method="POST" action="/shop">
+<li><a href="{{ url_for('shop') }}" >商店</a></li>
+</form>
+</ul>
+<form method="POST" action="/money">
+<center><h6 style="color:white;width:960px;height:60px;font-size:500%;">閣下{{username}}的總資產</h6>  
+<center><h6 style="color:white;width:1660px;height:60px;font-size:500%;">資產總值: {{totalvalue}} 錢: {{money}}</h6>  
+<table class="center" style="width:1200px">
+    <tr>
+      <th><center><h4 style="color:black;font-size:100%;">礦物類型</h4></th>
+      <th><img src="static\ironignot.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\coal.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\diamond.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\copper.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\redstone.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\gold.png" style="width:120px;height:100px;"></th>
+      <th><img src="static\emerald.png" style="width:120px;height:100px;"></th>
+    </tr>
+    <tr>
+    <td><center><h4 style="color:black;font-size:100%;">開采數量</h4></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty1 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty2 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty3 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty4 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty5 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty6 }}</h4><center></td>
+    <td><center><h4 style="color:black;font-size:200%;">{{ poverty7 }}</h4><center></td>
+    </tr>
+    <tr>
+      <td><center><h4 style="color:black;font-size:100%;">當前物價</h4></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current1}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current2}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current3}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current4}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current5}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current6}}</h4><center></td>
+      <td><center><h4 style="color:black;font-size:200%;">{{current7}}</h4><center></td>
+      </tr>
+  <tr>
+    <td><center><h4 style="color:black;font-size:100%;">出售數量</h4></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount0" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount1" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount2" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount3" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount4" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount5" value="0"><center></td>
+    <td><center><input type="text" style="color:black;width:100px;height:50px;font-size:100%;" placeholder="Username" name="amount6" value="0"><center></td> 
+    </tr>
+    <tr>
+      <td colspan="8"><center><input type="submit" class="button button1" value="sell" name="sell"><input type="submit" class="button button2"value="take" name="take"><input type="submit" class="button button3" value="buy" name="buy"></td>
+      </tr>
+    <textarea id="w3review" name="user" rows="4" cols="50" hidden>{{username}}</textarea>
+    <textarea id="w3review" name="pass" rows="4" cols="50" hidden>{{password}}</textarea>  
+  </form>  
+  </table>
+</body>
+</html>

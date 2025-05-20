@@ -1,0 +1,7 @@
+pip install pynvml
+pip install PyYAML
+pip install s_tui
+pip install flask
+pip install win32gui
+pip install psutil
+pip install bs4

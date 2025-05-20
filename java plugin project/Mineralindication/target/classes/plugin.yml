@@ -1,0 +1,8 @@
+name: Mineralindication
+version: '1.0-SNAPSHOT'
+main: mineralindication.mineralindication.Mineralindication
+api-version: 1.19
+folia-supported: true
+commands:
+  register:
+  token:

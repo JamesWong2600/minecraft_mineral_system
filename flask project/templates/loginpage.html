@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<head>
+<script>
+  //window.setTimeout( function() {
+   // window.location.reload();
+ // }, 3000);
+</script>
+<title>Flask模板</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='buy_sell_take_button.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: white;
+}
+</style>
+</head>
+<body>
+<center><form action="/playerpovety" method="post">
+  <br><br><br><br><br><br><br><br>   
+<label style="color:white;width:260px;height:60px;font-size:300%;">username:</label>  
+<input type="text" style="color:black;width:660px;height:60px;font-size:500%;" name="username" value=""><br><br>
+<label style="color:white;width:260px;height:60px;font-size:300%;">password:</label>  
+<input type="password" style="color:black;width:660px;height:60px;font-size:500%;" name="password" value=""><br><br>
+<input class="button button3 " type="submit" value="Login">
+</form>
+</body>
+</html>
